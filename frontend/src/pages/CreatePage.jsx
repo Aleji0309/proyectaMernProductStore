@@ -19,9 +19,18 @@ const CreatePage = () => {
                 title: "Error",
                 description: message,
                 status: "error",
-                duration: 3000
+                isClosable: true,
+            })
+        } else {
+            toast({
+                title: "Success",
+                description: message,
+                status: "success",
+                isClosable: true,
             })
         }
+
+        setNewProduct({ name: "", price: "", image: "" });
 
     }
     return (
